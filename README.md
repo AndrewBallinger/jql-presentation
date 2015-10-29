@@ -1,8 +1,6 @@
-\[fragile\]
 
 ~~What is a JIRA and how do I get one?~~
 
-\[fragile\]
 
 ### Overview
 
@@ -20,25 +18,21 @@
 
 -   <span>Useful Queries</span>
 
-\[fragile\]
 
 ### The Watcher
 
 ![image](eye_of_sauron.jpg)
 
-\[fragile\]
 
 ### Workflow as seen on JIRA
 
 ![image](workflow.png)
 
-\[fragile\]
 
 ### Syntax and Semantics
 
 ![image](sleep.png)
 
-\[fragile\]
 
 ### Operators
 
@@ -66,21 +60,17 @@ Conditional
 
 -   not in
 
-\[fragile\]
 
 ### Algebra all over again
 
-\[fragile\]
 
 ### Fields and Values
 
-\[fragile\]
 
 ### Food and Questions Break
 
 ![image](comic.png)
 
-\[fragile\]
 
 ### Integration and reuse
 
@@ -96,7 +86,6 @@ Conditional
 
 -   <span>Webhooks!</span>
 
-\[fragile\]
 
 ### Gotchas
 
@@ -110,6 +99,6 @@ Conditional
 
 -   <span>Absolute truth and duplication</span>
 
-\[fragile\]
-
 ### Useful Queries
+
+Intentionally left blank. Show and tell.
