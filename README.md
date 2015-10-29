@@ -2,7 +2,7 @@
 ~~What is a JIRA and how do I get one?~~
 
 
-### Overview
+## Overview
 
 -   <span>The Watcher</span>
 
@@ -19,22 +19,27 @@
 -   <span>Useful Queries</span>
 
 
-### The Watcher
+## The Watcher
+
+Don't measure what you don't want to optimize.
+
+Automation can help.
 
 ![image](eye_of_sauron.jpg)
 
 
-### Workflow as seen on JIRA
+## Workflow as seen on JIRA
 
 ![image](workflow.png)
 
 
-### Syntax and Semantics
+## Syntax and Semantics
 
 ![image](sleep.png)
 
+### Don't Panic
 
-### Operators
+## Operators
 
 Logical
 
@@ -61,18 +66,32 @@ Conditional
 -   not in
 
 
-### Algebra all over again
+## Algebra all over again
 
+Which are the same?
 
-### Fields and Values
+A AND B OR C
 
+A AND (B OR C)
 
-### Food and Questions Break
+(A AND B) OR C
+
+Don't guess! Just include parens all the time.
+
+## Fields and Values
+
+project = Android OR project = iOS
+
+project in (Android, iOS) AND type = Bug
+
+(project != ATEAM) AND (text ~ Drawing) AND resolved is EMPTY
+
+## Food and Questions Break
 
 ![image](comic.png)
 
 
-### Integration and reuse
+## Integration and reuse
 
 -   <span>Filters</span>
 
