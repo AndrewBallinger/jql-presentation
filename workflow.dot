@@ -1,0 +1,43 @@
+digraph standard_workflow{
+
+
+  subgraph clusterExternal{
+    label="Scheduling"
+    conception [label="Conception"]
+    backlog [label="Backlog" color=red shape=circle]
+    on_deck [label="On Deck"]
+    sprint [label="Sprint" color=red shape=circle]
+  }
+
+  subgraph clusterInternal{
+    label="Executing"
+    color="Red"
+    developer [label="Build"]
+    QA [label="QA"]
+    review [label="Review"]
+  }
+
+  production [label="Production" color=gold shape=circle]
+  discharge [label="Discharged"]
+
+  conception -> backlog
+  conception -> sprint
+
+  backlog -> on_deck
+  backlog -> sprint
+  backlog -> discharge
+  
+  on_deck -> sprint
+  
+  sprint -> developer
+  developer -> backlog
+  developer -> discharge
+  
+  developer -> QA
+  QA -> developer
+  QA -> review
+  review -> production
+  review -> developer
+
+
+}

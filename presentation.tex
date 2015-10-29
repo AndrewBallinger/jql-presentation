@@ -4,11 +4,15 @@
 \usepackage{graphicx}
 \usepackage{upquote}
 \usepackage{textcomp}
+\usepackage[normalem]{ulem}
+\usepackage{dejavu}
+
+\usepackage{DejaVuSansMono}
+\renewcommand*\familydefault{\ttdefault} %% Only if the base font of the document is to be typewriter style
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
-\usepackage{DejaVuSansMono}
 
 \lstset{basicstyle=\fontfamily{dejavu}\footnotesize\ttfamily,breaklines=true}
 \lstset{frame=bottomline}
@@ -21,111 +25,133 @@
 }
 
 \usetheme{Rochester}
-\title{ JIRA, Why bother? } 
-\subtitle{(Working Title)}
+\title{
+Charge
+Collaboration
+Engage
+Productivity
+Synergize
+Task
+Visibility
+Workflow
+}
+
 \author{Andrew Ballinger}
+
 \begin{document}
 
 \frame{\titlepage}
 
 \begin{frame}[fragile]
+  
+  \sout{What is a JIRA and how do I get one?}
+
+\end{frame}
+
+\begin{frame}[fragile]
   \frametitle{Overview}
 
   \begin{itemize}
-  \item{About JIRA}
-  \item{Why I think it's awesome}
-  \item{Filters}
-  \item{Boards}
-  \item{Things to try}
-  \item{Doing more with less}
+  \item{The Watcher}
+  \item{Basic workflow}
+  \item{Syntax Party}
+  \item{Food || Questions}
+  \item{Integration and reuse}
+  \item{Gotchas}
+  \item{Useful Queries}
   \end{itemize}
 
 \end{frame}
-
 \begin{frame}[fragile]
-  
-  \frametitle{What is a JIRA and how do I get one?}
-  Jira is a tool developed by Atlassian for project management.
+  \frametitle{The Watcher}
 
-  \begin{itemize}
-  \item{2002, Version 6.3.8}
-  \item{Predates the cloud}
-  \item{``Enterprise Strength''}
-  \item{Loved and Hated} % Mention the cost of configuration.
-  \item{No free option} % Mention the cost of configuration.
-  \end{itemize}
+  \center{Don't measure what you don't want to optimize.}
 
-\end{frame}
-
-\begin{frame}[fragile]
-  
-  \frametitle{Why I think it's awesome}
-  Some cliches about powerful things.
   \begin{figure}[p]
     \centering
-    \includegraphics[width=15em]{palantir.jpg}
-    \caption{With great power comes great responsibility --George Lucas}
+    \includegraphics[width=20em]{eye_of_sauron.jpg}
+  \end{figure}
+
+  \center{Automation can help.}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  
+  \frametitle{Workflow as seen on JIRA}
+
+  \begin{figure}[p]
+    \centering
+    \includegraphics[width=15em]{workflow.png}
   \end{figure}
 
 \end{frame}
 
+
 \begin{frame}[fragile]
+  \frametitle{Syntax and Semantics}
+
+  \begin{figure}[p]
+    \centering
+    \includegraphics[width=15em]{sleep.png}
+  \end{figure}
+
+  \centering\huge{Don't Panic}\par
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Operators}
+
+  Logical
+  \begin{itemize}
+  \item{AND}
+  \item{OR}
+  \item{NOT}
+  \end{itemize}
+
+  Conditional
+  \begin{itemize}
+  \item =
+  \item !=
+  \item \textasciitilde
+  \item is
+  \item is not
+  \item in
+  \item not in
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Algebra all over again}
+
+  \centering\huge{
+
+  A AND B OR C
+
+  A AND (B OR C)
+
+  (A AND B) OR C
+
+ }\par
+
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Fields and Values}
   
-  \frametitle{Filters: What are they?}
+   \centering\large{
 
-  \centering\huge{A way of getting at every ticket that exists in JIRA served up any way that you want them.}\par
+  project = Android OR project = iOS
 
-\end{frame}
+  project in (Android, iOS) AND type = Bug
 
+  (project != ATEAM) AND (text \textasciitilde \space Drawing)
 
-\begin{frame}[fragile]
-  \frametitle{Filters: Why are they good?}
+ }\par
 
-  \begin{itemize}
-  \item{Two strengths, Basic and Developer}
-  \item{Sharable}
-  \item{Savable}
-  \item{Confluence Integration}
-  \end{itemize}
-
-\end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{Filters: Getting started}
-
-  \begin{itemize}
-  \item{Go to issues and see what's public}
-  \item{Click around in basic}
-  \item{Check it out in advanced (if brave)}
-  \item{Completion is your friend}
-  \end{itemize}
-
-\end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{Boards: What are they?}
-  \centering\huge{Filters >>= Kanban}\par
-\end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{Boards: Why are they good?}
-
-  \begin{itemize}
-  \item{Day to day}
-  \item{Sprints}
-  \item{Overviews}
-  \end{itemize}
-  
-\end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{Boards: Getting Started}
-
-  \begin{itemize}
-  \item{Make a filter}
-  \item{Make a board}
-  \end{itemize}
-  
 \end{frame}
 
 \begin{frame}[fragile]
@@ -133,48 +159,36 @@
    \begin{figure}[p]
     \centering
     \includegraphics[width=15em]{comic.png}
-    \caption{This comic might be unrelated to the talk}
   \end{figure}
+\end{frame}
+\begin{frame}[fragile]
+  \frametitle{Integration and reuse}
+
+  \begin{itemize}
+  \item{Filters}
+  \item{Boards}
+  \item{Quick Filters}
+  \item{Sharing}
+  \item{Saving}
+  \item{Webhooks!}
+  \end{itemize}
   
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Android Workflow}
-
+  \frametitle{Gotchas}
   \begin{itemize}
-  \item{Mirrors most (all?) web teams}
-  \item{Never delete issues}
-  \item{Tasteful validations}
-  \item{Lots of filters and boards}
+  \item{Dates are goofy}
+  \item{Editing a saved filter is dangerous}
+  \item{Two types of sharing}
+  \item{Different teams, different states}
+  \item{Absolute truth and duplication}
   \end{itemize}
-
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Advanced: Things to try}
-
-  \begin{itemize}
-  \item{Add/Delete fields}
-  \item{Create private boards}
-  \item{Subtasks}
-  \item{Epics}
-  \item{Add/Delete Issue types}
-  \item{Validations}
-  \item{Webhooks / API}
-  \end{itemize}
-
-\end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{Additional Resources}
-
-  Get them while they're hot.
-
-  \begin{itemize}
-  \item{\href{http://tolkiengateway.net/wiki/Palant\%C3\%ADri}{Palantiri on Tolkien Gateway.}}
-  \item{\href{https://confluence.atlassian.com/display/JIRA/Configuring+Workflow}{Workflow Docs on JIRA}}
-  \end{itemize}
-
+  \frametitle{Useful Queries}
+  \centering\huge{\em This slide intentionally left blank}
 \end{frame}
 
 \end{document}
